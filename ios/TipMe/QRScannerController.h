@@ -10,7 +10,7 @@
 #import "ZXingWidgetController.h"
 #import "QRCodeReader.h"
 
-@interface RKQRCodeController : UIViewController <ZXingDelegate, UIActionSheetDelegate>
+@interface QRScannerController : UIViewController <ZXingDelegate, UIActionSheetDelegate>
 {
     IBOutlet UITextView *resultsView;
     NSString *resultsToDisplay;   

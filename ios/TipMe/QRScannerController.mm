@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Wawra Corp. All rights reserved.
 //
 
-#import "RKQRCodeController.h"
+#import "QRScannerController.h"
 #import "QRCodeReader.h"
 
-@implementation RKQRCodeController
+@implementation QRScannerController
 
 @synthesize qrcodeReader;
 @synthesize widController;
