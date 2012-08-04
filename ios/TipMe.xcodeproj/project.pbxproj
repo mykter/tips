@@ -26,7 +26,6 @@
 		2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */; };
 		2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */; };
 		7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F115CD4E8B00767751 /* OverlayView.m */; };
-		7AFE92F715CD4E8B00767751 /* QRScannerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F315CD4E8B00767751 /* QRScannerController.mm */; };
 		7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */; };
 		7AFE935C15CD55FA00767751 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935B15CD55FA00767751 /* AVFoundation.framework */; };
 		7AFE935E15CD560000767751 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935D15CD560000767751 /* AudioToolbox.framework */; };
@@ -36,6 +35,7 @@
 		7AFE936615CD567700767751 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936515CD567700767751 /* AddressBook.framework */; };
 		7AFE936815CD567D00767751 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936715CD567D00767751 /* AddressBookUI.framework */; };
 		7AFE93C115CD5DE900767751 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE93BC15CD5DB200767751 /* libZXingWidget.a */; };
+		7AFE93CD15CD620600767751 /* QRScannerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE93CC15CD620600767751 /* QRScannerController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,6 @@
 		7AFE92F015CD4E8B00767751 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
 		7AFE92F115CD4E8B00767751 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		7AFE92F215CD4E8B00767751 /* QRScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerController.h; sourceTree = "<group>"; };
-		7AFE92F315CD4E8B00767751 /* QRScannerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRScannerController.mm; sourceTree = "<group>"; };
 		7AFE92F415CD4E8B00767751 /* ZXingWidgetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWidgetController.h; sourceTree = "<group>"; };
 		7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWidgetController.m; sourceTree = "<group>"; };
 		7AFE935B15CD55FA00767751 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +109,7 @@
 		7AFE936515CD567700767751 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		7AFE936715CD567D00767751 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "../zxing-2.0/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = "<group>"; };
+		7AFE93CC15CD620600767751 /* QRScannerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRScannerController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +234,7 @@
 				7AFE92F015CD4E8B00767751 /* OverlayView.h */,
 				7AFE92F115CD4E8B00767751 /* OverlayView.m */,
 				7AFE92F215CD4E8B00767751 /* QRScannerController.h */,
-				7AFE92F315CD4E8B00767751 /* QRScannerController.mm */,
+				7AFE93CC15CD620600767751 /* QRScannerController.mm */,
 				7AFE92F415CD4E8B00767751 /* ZXingWidgetController.h */,
 				7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */,
 				2C195A4D15CD33AF00010377 /* PaymentViewController.h */,
@@ -403,8 +403,8 @@
 				2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */,
 				2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */,
 				7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */,
-				7AFE92F715CD4E8B00767751 /* QRScannerController.mm in Sources */,
 				7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */,
+				7AFE93CD15CD620600767751 /* QRScannerController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
