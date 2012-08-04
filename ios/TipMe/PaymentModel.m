@@ -22,7 +22,7 @@
     NSString *urlString = [NSString stringWithFormat:@"http://%@/pay/%@/%@/%@",
                            SERVER,
                            customerId,
-                           waiterId,
+                           @"2c45d4d6-7427-45ca-88ed-3d7f275646b6",
                            amount];
     
     NSLog(@"Sending the request to %@", urlString);
