@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXingWidgetController.h"
+#import "QRCodeReader.h"
 
-
-@interface HomeViewController : UITableViewController
+@interface HomeViewController : UITableViewController <ZXingDelegate>
 
 @property (strong, nonatomic) UIButton *payButton;
+
+@property (nonatomic, retain) ZXingWidgetController *widController;
+@property (nonatomic, retain) QRCodeReader* qrcodeReader;
 
 
 
