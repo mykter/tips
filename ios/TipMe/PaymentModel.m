@@ -19,7 +19,7 @@
 
 - (void)sendPayment:(NSString *)waiterId customerId:(NSString *)customerId amount:(NSString *)amount
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://%@/~tomasmcguinness/sendpayment.html?customerId=%@&waiterId=%@&amount=%@",
+    NSString *urlString = [NSString stringWithFormat:@"http://%@/pay/%@/%@/%@",
                            SERVER,
                            customerId,
                            waiterId,
@@ -62,7 +62,9 @@
                      return;
                  }
                  
-                 NSString *paymentUrl = [results valueForKey:@"paymentUrl"];
+                 NSString *paymentUrl = [results valueForKey:@"paymentURL"];
+                 
+                 NSLog(@"URL Returned: %@", paymentUrl);
                  
                  dispatch_async(dispatch_get_main_queue(), ^{
                      [self.delegate sendPaymentOpenLink:paymentUrl];

@@ -1,18 +1,17 @@
 //
-//  SignInViewController.m
+//  LoginViewController.m
 //  TipMe
 //
 //  Created by Tomas McGuinness on 04/08/2012.
 //  Copyright (c) 2012 API HackDay. All rights reserved.
 //
 
-#import "SignInViewController.h"
+#import "LoginViewController.h"
 
-@interface SignInViewController ()
+@implementation LoginViewController
 
-@end
-
-@implementation SignInViewController
+@synthesize emailAddressField;
+@synthesize passwordField;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,12 +25,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"Sign In";
+    
+    self.navigationItem.title = @"Login";
+    
+    self.emailAddressField = [[UITextField alloc] initWithFrame:CGRectMake(130, 10, 170, 40)];
+    self.emailAddressField.keyboardType = UIKeyboardTypeEmailAddress;
+    self.emailAddressField.placeholder = @"email address";
+    
+    self.passwordField = [[UITextField alloc] initWithFrame:CGRectMake(130, 10, 170, 40)];
+    self.passwordField.secureTextEntry = YES;
+    self.passwordField.placeholder = @"password";
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -44,13 +59,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,7 +73,21 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    if(indexPath.row == 0)
+    {
+        [cell.contentView addSubview:self.emailAddressField];
+        cell.textLabel.text = @"Email";
+    }
+    else
+    {
+        [cell.contentView addSubview:self.passwordField];
+        cell.textLabel.text = @"Password";        
+    }
     
     return cell;
 }

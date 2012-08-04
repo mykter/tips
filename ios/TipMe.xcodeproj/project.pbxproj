@@ -26,6 +26,9 @@
 		2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */; };
 		2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */; };
 		2C195AAC15CD477E00010377 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AAB15CD477E00010377 /* SignInViewController.m */; };
+		2C6A607615CD5104005CF2E7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607515CD5104005CF2E7 /* HomeViewController.m */; };
+		2C6A607A15CD5125005CF2E7 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607915CD5125005CF2E7 /* WelcomeViewController.m */; };
+		2C6A607D15CD55FA005CF2E7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607C15CD55FA005CF2E7 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,12 @@
 		2C195AAA15CD477E00010377 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		2C195AAB15CD477E00010377 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		2C195AAD15CD489F00010377 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2C6A607415CD5104005CF2E7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2C6A607515CD5104005CF2E7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2C6A607815CD5125005CF2E7 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		2C6A607915CD5125005CF2E7 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		2C6A607B15CD55F9005CF2E7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2C6A607C15CD55FA005CF2E7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,12 +185,18 @@
 			children = (
 				2C195AA715CD3AAD00010377 /* AuthorizationViewController.h */,
 				2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */,
+				2C6A607415CD5104005CF2E7 /* HomeViewController.h */,
+				2C6A607515CD5104005CF2E7 /* HomeViewController.m */,
+				2C6A607B15CD55F9005CF2E7 /* LoginViewController.h */,
+				2C6A607C15CD55FA005CF2E7 /* LoginViewController.m */,
 				2C195A4D15CD33AF00010377 /* PaymentViewController.h */,
 				2C195A4E15CD33AF00010377 /* PaymentViewController.m */,
 				2C195AAA15CD477E00010377 /* SignInViewController.h */,
 				2C195AAB15CD477E00010377 /* SignInViewController.m */,
 				2C195AA415CD38E600010377 /* UITableViewControllerWithLoadingViewController.h */,
 				2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */,
+				2C6A607815CD5125005CF2E7 /* WelcomeViewController.h */,
+				2C6A607915CD5125005CF2E7 /* WelcomeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -309,6 +324,9 @@
 				2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */,
 				2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */,
 				2C195AAC15CD477E00010377 /* SignInViewController.m in Sources */,
+				2C6A607615CD5104005CF2E7 /* HomeViewController.m in Sources */,
+				2C6A607A15CD5125005CF2E7 /* WelcomeViewController.m in Sources */,
+				2C6A607D15CD55FA005CF2E7 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +492,7 @@
 				2C195A4815CD339000010377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C195A4915CD339000010377 /* Build configuration list for PBXNativeTarget "TipMeTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +501,7 @@
 				2C195A4B15CD339000010377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

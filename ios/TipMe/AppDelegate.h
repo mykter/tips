@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PaymentViewController.h"
+#import "WelcomeViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
