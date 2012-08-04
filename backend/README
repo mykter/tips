@@ -1,0 +1,7 @@
+Installing:
+	virtualenv --no-site-packages env
+	env/bin/pip install gocardless
+	env/bin/easy_install pyramid
+
+Running:
+	env/bin/python lannyapp.py
