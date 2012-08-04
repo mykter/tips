@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C195A1815CD338F00010377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1715CD338F00010377 /* UIKit.framework */; };
+		2C195A1A15CD338F00010377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1915CD338F00010377 /* Foundation.framework */; };
+		2C195A1C15CD338F00010377 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1B15CD338F00010377 /* CoreGraphics.framework */; };
+		2C195A1E15CD338F00010377 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1D15CD338F00010377 /* CoreData.framework */; };
+		2C195A2415CD338F00010377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C195A2215CD338F00010377 /* InfoPlist.strings */; };
+		2C195A2615CD338F00010377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A2515CD338F00010377 /* main.m */; };
+		2C195A2A15CD338F00010377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A2915CD338F00010377 /* AppDelegate.m */; };
+		2C195A2D15CD338F00010377 /* TipMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A2B15CD338F00010377 /* TipMe.xcdatamodeld */; };
+		2C195A3515CD338F00010377 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A3415CD338F00010377 /* SenTestingKit.framework */; };
+		2C195A3615CD338F00010377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1715CD338F00010377 /* UIKit.framework */; };
+		2C195A3715CD338F00010377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1915CD338F00010377 /* Foundation.framework */; };
+		2C195A3815CD338F00010377 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C195A1D15CD338F00010377 /* CoreData.framework */; };
+		2C195A4015CD338F00010377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C195A3E15CD338F00010377 /* InfoPlist.strings */; };
+		2C195A4315CD339000010377 /* TipMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A4215CD339000010377 /* TipMeTests.m */; };
+		2C195A4F15CD33AF00010377 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A4E15CD33AF00010377 /* PaymentViewController.m */; };
+		2C195A5215CD368900010377 /* PaymentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A5115CD368900010377 /* PaymentModel.m */; };
+		2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */; };
+		2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */; };
+		2C195AAC15CD477E00010377 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AAB15CD477E00010377 /* SignInViewController.m */; };
+		2C6A607615CD5104005CF2E7 /* HomeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607515CD5104005CF2E7 /* HomeViewController.mm */; };
+		2C6A607A15CD5125005CF2E7 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607915CD5125005CF2E7 /* WelcomeViewController.m */; };
+		2C6A607D15CD55FA005CF2E7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607C15CD55FA005CF2E7 /* LoginViewController.m */; };
+		2C6A608015CD5E73005CF2E7 /* bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A607F15CD5E73005CF2E7 /* bitcoin.png */; };
+		2C6A608615CD6073005CF2E7 /* LannyApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A608515CD6073005CF2E7 /* LannyApp.png */; };
+		2C6A608815CD6089005CF2E7 /* LannyApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A608715CD6089005CF2E7 /* LannyApp@2x.png */; };
+		7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F115CD4E8B00767751 /* OverlayView.m */; };
+		7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */; };
+		7AFE935C15CD55FA00767751 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935B15CD55FA00767751 /* AVFoundation.framework */; };
+		7AFE935E15CD560000767751 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935D15CD560000767751 /* AudioToolbox.framework */; };
+		7AFE936015CD560900767751 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935F15CD560900767751 /* CoreVideo.framework */; };
+		7AFE936215CD565B00767751 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936115CD565B00767751 /* CoreMedia.framework */; };
+		7AFE936415CD566900767751 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936315CD566900767751 /* libiconv.dylib */; };
+		7AFE936615CD567700767751 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936515CD567700767751 /* AddressBook.framework */; };
+		7AFE936815CD567D00767751 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936715CD567D00767751 /* AddressBookUI.framework */; };
+		7AFE93C115CD5DE900767751 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE93BC15CD5DB200767751 /* libZXingWidget.a */; };
+		7AFE93CD15CD620600767751 /* QRScannerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE93CC15CD620600767751 /* QRScannerController.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C195A3915CD338F00010377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C195A0A15CD338F00010377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C195A1215CD338F00010377;
+			remoteInfo = TipMe;
+		};
+		7AFE93BB15CD5DB200767751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		7AFE93BD15CD5DB200767751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
+		7AFE93BF15CD5DE400767751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C195A1315CD338F00010377 /* TipMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C195A1715CD338F00010377 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2C195A1915CD338F00010377 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C195A1B15CD338F00010377 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C195A1D15CD338F00010377 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2C195A2115CD338F00010377 /* TipMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TipMe-Info.plist"; sourceTree = "<group>"; };
+		2C195A2315CD338F00010377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C195A2515CD338F00010377 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C195A2715CD338F00010377 /* TipMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TipMe-Prefix.pch"; sourceTree = "<group>"; };
+		2C195A2815CD338F00010377 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C195A2915CD338F00010377 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C195A2C15CD338F00010377 /* TipMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TipMe.xcdatamodel; sourceTree = "<group>"; };
+		2C195A3315CD338F00010377 /* TipMeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipMeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C195A3415CD338F00010377 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2C195A3D15CD338F00010377 /* TipMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TipMeTests-Info.plist"; sourceTree = "<group>"; };
+		2C195A3F15CD338F00010377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C195A4115CD339000010377 /* TipMeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipMeTests.h; sourceTree = "<group>"; };
+		2C195A4215CD339000010377 /* TipMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipMeTests.m; sourceTree = "<group>"; };
+		2C195A4D15CD33AF00010377 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		2C195A4E15CD33AF00010377 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		2C195A5015CD368900010377 /* PaymentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentModel.h; sourceTree = "<group>"; };
+		2C195A5115CD368900010377 /* PaymentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentModel.m; sourceTree = "<group>"; };
+		2C195AA415CD38E600010377 /* UITableViewControllerWithLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewControllerWithLoadingViewController.h; sourceTree = "<group>"; };
+		2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerWithLoadingViewController.m; sourceTree = "<group>"; };
+		2C195AA715CD3AAD00010377 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
+		2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
+		2C195AAA15CD477E00010377 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		2C195AAB15CD477E00010377 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		2C195AAD15CD489F00010377 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2C6A607415CD5104005CF2E7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2C6A607515CD5104005CF2E7 /* HomeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HomeViewController.mm; sourceTree = "<group>"; };
+		2C6A607815CD5125005CF2E7 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		2C6A607915CD5125005CF2E7 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		2C6A607B15CD55F9005CF2E7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2C6A607C15CD55FA005CF2E7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2C6A607F15CD5E73005CF2E7 /* bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitcoin.png; sourceTree = "<group>"; };
+		2C6A608515CD6073005CF2E7 /* LannyApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LannyApp.png; path = ../LannyApp.png; sourceTree = "<group>"; };
+		2C6A608715CD6089005CF2E7 /* LannyApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LannyApp@2x.png"; path = "../LannyApp@2x.png"; sourceTree = "<group>"; };
+		7AFE92F015CD4E8B00767751 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		7AFE92F115CD4E8B00767751 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		7AFE92F215CD4E8B00767751 /* QRScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerController.h; sourceTree = "<group>"; };
+		7AFE92F415CD4E8B00767751 /* ZXingWidgetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWidgetController.h; sourceTree = "<group>"; };
+		7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWidgetController.m; sourceTree = "<group>"; };
+		7AFE935B15CD55FA00767751 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7AFE935D15CD560000767751 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7AFE935F15CD560900767751 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		7AFE936115CD565B00767751 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7AFE936315CD566900767751 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		7AFE936515CD567700767751 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7AFE936715CD567D00767751 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "../zxing-2.0/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = "<group>"; };
+		7AFE93CC15CD620600767751 /* QRScannerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRScannerController.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C195A1015CD338F00010377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AFE93C115CD5DE900767751 /* libZXingWidget.a in Frameworks */,
+				7AFE936815CD567D00767751 /* AddressBookUI.framework in Frameworks */,
+				7AFE936615CD567700767751 /* AddressBook.framework in Frameworks */,
+				7AFE936415CD566900767751 /* libiconv.dylib in Frameworks */,
+				7AFE936215CD565B00767751 /* CoreMedia.framework in Frameworks */,
+				7AFE936015CD560900767751 /* CoreVideo.framework in Frameworks */,
+				7AFE935E15CD560000767751 /* AudioToolbox.framework in Frameworks */,
+				7AFE935C15CD55FA00767751 /* AVFoundation.framework in Frameworks */,
+				2C195A1815CD338F00010377 /* UIKit.framework in Frameworks */,
+				2C195A1A15CD338F00010377 /* Foundation.framework in Frameworks */,
+				2C195A1C15CD338F00010377 /* CoreGraphics.framework in Frameworks */,
+				2C195A1E15CD338F00010377 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C195A2F15CD338F00010377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C195A3515CD338F00010377 /* SenTestingKit.framework in Frameworks */,
+				2C195A3615CD338F00010377 /* UIKit.framework in Frameworks */,
+				2C195A3715CD338F00010377 /* Foundation.framework in Frameworks */,
+				2C195A3815CD338F00010377 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C195A0815CD338F00010377 = {
+			isa = PBXGroup;
+			children = (
+				7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */,
+				2C195A1F15CD338F00010377 /* TipMe */,
+				2C195A3B15CD338F00010377 /* TipMeTests */,
+				2C195A1615CD338F00010377 /* Frameworks */,
+				2C195A1415CD338F00010377 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C195A1415CD338F00010377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C195A1315CD338F00010377 /* TipMe.app */,
+				2C195A3315CD338F00010377 /* TipMeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C195A1615CD338F00010377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AFE936715CD567D00767751 /* AddressBookUI.framework */,
+				7AFE936515CD567700767751 /* AddressBook.framework */,
+				7AFE936315CD566900767751 /* libiconv.dylib */,
+				7AFE936115CD565B00767751 /* CoreMedia.framework */,
+				7AFE935F15CD560900767751 /* CoreVideo.framework */,
+				7AFE935D15CD560000767751 /* AudioToolbox.framework */,
+				7AFE935B15CD55FA00767751 /* AVFoundation.framework */,
+				2C195A1715CD338F00010377 /* UIKit.framework */,
+				2C195A1915CD338F00010377 /* Foundation.framework */,
+				2C195A1B15CD338F00010377 /* CoreGraphics.framework */,
+				2C195A1D15CD338F00010377 /* CoreData.framework */,
+				2C195A3415CD338F00010377 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C195A1F15CD338F00010377 /* TipMe */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A607E15CD5E6C005CF2E7 /* Images */,
+				2C195A2815CD338F00010377 /* AppDelegate.h */,
+				2C195A2915CD338F00010377 /* AppDelegate.m */,
+				2C195AAD15CD489F00010377 /* Common.h */,
+				2C195A5315CD374500010377 /* Models */,
+				2C195A2015CD338F00010377 /* Supporting Files */,
+				2C195A2B15CD338F00010377 /* TipMe.xcdatamodeld */,
+				2C195A4C15CD339400010377 /* ViewControllers */,
+			);
+			path = TipMe;
+			sourceTree = "<group>";
+		};
+		2C195A2015CD338F00010377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C195A2115CD338F00010377 /* TipMe-Info.plist */,
+				2C195A2215CD338F00010377 /* InfoPlist.strings */,
+				2C195A2515CD338F00010377 /* main.m */,
+				2C195A2715CD338F00010377 /* TipMe-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C195A3B15CD338F00010377 /* TipMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C195A4115CD339000010377 /* TipMeTests.h */,
+				2C195A4215CD339000010377 /* TipMeTests.m */,
+				2C195A3C15CD338F00010377 /* Supporting Files */,
+			);
+			path = TipMeTests;
+			sourceTree = "<group>";
+		};
+		2C195A3C15CD338F00010377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C195A3D15CD338F00010377 /* TipMeTests-Info.plist */,
+				2C195A3E15CD338F00010377 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C195A4C15CD339400010377 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C195AA715CD3AAD00010377 /* AuthorizationViewController.h */,
+				2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */,
+				2C6A607415CD5104005CF2E7 /* HomeViewController.h */,
+				2C6A607515CD5104005CF2E7 /* HomeViewController.mm */,
+				2C6A607B15CD55F9005CF2E7 /* LoginViewController.h */,
+				2C6A607C15CD55FA005CF2E7 /* LoginViewController.m */,
+				7AFE92F015CD4E8B00767751 /* OverlayView.h */,
+				7AFE92F115CD4E8B00767751 /* OverlayView.m */,
+				7AFE92F215CD4E8B00767751 /* QRScannerController.h */,
+				7AFE93CC15CD620600767751 /* QRScannerController.mm */,
+				7AFE92F415CD4E8B00767751 /* ZXingWidgetController.h */,
+				7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */,
+				2C195A4D15CD33AF00010377 /* PaymentViewController.h */,
+				2C195A4E15CD33AF00010377 /* PaymentViewController.m */,
+				2C195AAA15CD477E00010377 /* SignInViewController.h */,
+				2C195AAB15CD477E00010377 /* SignInViewController.m */,
+				2C195AA415CD38E600010377 /* UITableViewControllerWithLoadingViewController.h */,
+				2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */,
+				2C6A607815CD5125005CF2E7 /* WelcomeViewController.h */,
+				2C6A607915CD5125005CF2E7 /* WelcomeViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C195A5315CD374500010377 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C195A5015CD368900010377 /* PaymentModel.h */,
+				2C195A5115CD368900010377 /* PaymentModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2C6A607E15CD5E6C005CF2E7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A608715CD6089005CF2E7 /* LannyApp@2x.png */,
+				2C6A608515CD6073005CF2E7 /* LannyApp.png */,
+				2C6A607F15CD5E73005CF2E7 /* bitcoin.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		7AFE93B415CD5DB200767751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AFE93BC15CD5DB200767751 /* libZXingWidget.a */,
+				7AFE93BE15CD5DB200767751 /* ZXingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C195A1215CD338F00010377 /* TipMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C195A4615CD339000010377 /* Build configuration list for PBXNativeTarget "TipMe" */;
+			buildPhases = (
+				2C195A0F15CD338F00010377 /* Sources */,
+				2C195A1015CD338F00010377 /* Frameworks */,
+				2C195A1115CD338F00010377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AFE93C015CD5DE400767751 /* PBXTargetDependency */,
+			);
+			name = TipMe;
+			productName = TipMe;
+			productReference = 2C195A1315CD338F00010377 /* TipMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C195A3215CD338F00010377 /* TipMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C195A4915CD339000010377 /* Build configuration list for PBXNativeTarget "TipMeTests" */;
+			buildPhases = (
+				2C195A2E15CD338F00010377 /* Sources */,
+				2C195A2F15CD338F00010377 /* Frameworks */,
+				2C195A3015CD338F00010377 /* Resources */,
+				2C195A3115CD338F00010377 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C195A3A15CD338F00010377 /* PBXTargetDependency */,
+			);
+			name = TipMeTests;
+			productName = TipMeTests;
+			productReference = 2C195A3315CD338F00010377 /* TipMeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C195A0A15CD338F00010377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "API HackDay";
+			};
+			buildConfigurationList = 2C195A0D15CD338F00010377 /* Build configuration list for PBXProject "TipMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C195A0815CD338F00010377;
+			productRefGroup = 2C195A1415CD338F00010377 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7AFE93B415CD5DB200767751 /* Products */;
+					ProjectRef = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				2C195A1215CD338F00010377 /* TipMe */,
+				2C195A3215CD338F00010377 /* TipMeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7AFE93BC15CD5DB200767751 /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = 7AFE93BB15CD5DB200767751 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7AFE93BE15CD5DB200767751 /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = 7AFE93BD15CD5DB200767751 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C195A1115CD338F00010377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C195A2415CD338F00010377 /* InfoPlist.strings in Resources */,
+				2C6A608015CD5E73005CF2E7 /* bitcoin.png in Resources */,
+				2C6A608615CD6073005CF2E7 /* LannyApp.png in Resources */,
+				2C6A608815CD6089005CF2E7 /* LannyApp@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C195A3015CD338F00010377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C195A4015CD338F00010377 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C195A3115CD338F00010377 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C195A0F15CD338F00010377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C195A2615CD338F00010377 /* main.m in Sources */,
+				2C195A2A15CD338F00010377 /* AppDelegate.m in Sources */,
+				2C195A2D15CD338F00010377 /* TipMe.xcdatamodeld in Sources */,
+				2C195A4F15CD33AF00010377 /* PaymentViewController.m in Sources */,
+				2C195A5215CD368900010377 /* PaymentModel.m in Sources */,
+				2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */,
+				2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */,
+				2C195AAC15CD477E00010377 /* SignInViewController.m in Sources */,
+				2C6A607615CD5104005CF2E7 /* HomeViewController.mm in Sources */,
+				2C6A607A15CD5125005CF2E7 /* WelcomeViewController.m in Sources */,
+				2C6A607D15CD55FA005CF2E7 /* LoginViewController.m in Sources */,
+				7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */,
+				7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */,
+				7AFE93CD15CD620600767751 /* QRScannerController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C195A2E15CD338F00010377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C195A4315CD339000010377 /* TipMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C195A3A15CD338F00010377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C195A1215CD338F00010377 /* TipMe */;
+			targetProxy = 2C195A3915CD338F00010377 /* PBXContainerItemProxy */;
+		};
+		7AFE93C015CD5DE400767751 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZXingWidget;
+			targetProxy = 7AFE93BF15CD5DE400767751 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C195A2215CD338F00010377 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C195A2315CD338F00010377 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2C195A3E15CD338F00010377 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C195A3F15CD338F00010377 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C195A4415CD339000010377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C195A4515CD339000010377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C195A4715CD339000010377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TipMe/TipMe-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../zxing-2.0/iphone/ZXingWidget/Classes/**",
+					"../zxing-2.0/cpp/core/src",
+				);
+				INFOPLIST_FILE = "TipMe/TipMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2C195A4815CD339000010377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TipMe/TipMe-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../zxing-2.0/iphone/ZXingWidget/Classes/**",
+					"../zxing-2.0/cpp/core/src",
+				);
+				INFOPLIST_FILE = "TipMe/TipMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2C195A4A15CD339000010377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TipMe.app/TipMe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TipMe/TipMe-Prefix.pch";
+				INFOPLIST_FILE = "TipMeTests/TipMeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2C195A4B15CD339000010377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TipMe.app/TipMe";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TipMe/TipMe-Prefix.pch";
+				INFOPLIST_FILE = "TipMeTests/TipMeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C195A0D15CD338F00010377 /* Build configuration list for PBXProject "TipMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C195A4415CD339000010377 /* Debug */,
+				2C195A4515CD339000010377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C195A4615CD339000010377 /* Build configuration list for PBXNativeTarget "TipMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C195A4715CD339000010377 /* Debug */,
+				2C195A4815CD339000010377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C195A4915CD339000010377 /* Build configuration list for PBXNativeTarget "TipMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C195A4A15CD339000010377 /* Debug */,
+				2C195A4B15CD339000010377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C195A2B15CD338F00010377 /* TipMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C195A2C15CD338F00010377 /* TipMe.xcdatamodel */,
+			);
+			currentVersion = 2C195A2C15CD338F00010377 /* TipMe.xcdatamodel */;
+			path = TipMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C195A0A15CD338F00010377 /* Project object */;
+}
