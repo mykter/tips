@@ -8,11 +8,9 @@
 
 #import "HomeViewController.h"
 
-@interface HomeViewController ()
-
-@end
-
 @implementation HomeViewController
+
+@synthesize payButton;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,12 +24,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.title = @"Welcome";
+    
+    self.payButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.payButton addTarget:self action:@selector(takePayment) forControlEvents:UIControlEventTouchUpInside];
+    [self.payButton setImage:[UIImage imageNamed:@"bitcoin"] forState:UIControlEventAllEvents];
+    self.payButton.frame = CGRectMake(0,0,130,130);
+    [self.view addSubview:payButton];
 }
 
 - (void)viewDidUnload
@@ -44,6 +44,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)takePayment
+{
+    UIViewController *controller = [[UIViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - Table view data source

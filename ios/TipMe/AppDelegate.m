@@ -17,10 +17,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    PaymentViewController *paymentViewCon = [[PaymentViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:paymentViewCon];
-    //WelcomeViewController *welcomeViewCon = [[WelcomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:welcomeViewCon];
+    
+    //PaymentViewController *paymentViewCon = [[PaymentViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:paymentViewCon];
+    
+    WelcomeViewController *welcomeViewCon = [[WelcomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:welcomeViewCon];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

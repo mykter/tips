@@ -10,4 +10,6 @@
 
 @interface HomeViewController : UITableViewController
 
+@property (strong, nonatomic) UIButton *payButton;
+
 @end
