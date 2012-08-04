@@ -63,9 +63,24 @@
     [self.delegate cancel];
 }
 
+- (BOOL)webView:(UIWebView *)webViewB shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    // Intercept the callback from the payment and redirect if necessary.
+    //
+    NSLog(@"Loading: %@", request.URL.absoluteString);
+    
+    if([request.URL.host isEqualToString:@"10.0.1.86"])
+    {
+        [self.delegate paymentComplete];
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-     NSLog(@"Finished Load");
+    NSLog(@"Finished Load");
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webViewB
@@ -77,7 +92,7 @@
     if(webViewB.request.URL.absoluteString == @"http://www.bing.com")
     {
         [self.delegate paymentComplete];
-    }
+    }    
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

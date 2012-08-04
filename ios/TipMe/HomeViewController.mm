@@ -27,8 +27,10 @@
     
     self.firstLaunch = YES;
     
+    self.view.frame.origin = CGPointMake(0, -50);
+    
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
-    imageView.frame.origin = CGPointMake(0,-50);
+    //imageView.frame.origin = CGPointMake(0,0);
     [self.view addSubview:imageView];
         
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Scan" style:UIBarButtonItemStyleDone target:self action:@selector(launchQRScanner)];
