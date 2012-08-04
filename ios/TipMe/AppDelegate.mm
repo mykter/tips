@@ -21,8 +21,9 @@
     //PaymentViewController *paymentViewCon = [[PaymentViewController alloc] initWithStyle:UITableViewStyleGrouped];
     //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:paymentViewCon];
     
-    WelcomeViewController *welcomeViewCon = [[WelcomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:welcomeViewCon];
+    HomeViewController *homeController = [[HomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:homeController];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
