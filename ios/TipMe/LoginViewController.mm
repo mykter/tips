@@ -64,8 +64,8 @@
 
 - (void)done
 {
-    HomeViewController *homeCon = [[HomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    [self.navigationController pushViewController:homeCon animated:YES];
+    //HomeViewController *homeCon = [[HomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    //[self.navigationController pushViewController:homeCon animated:YES];
 }
 
 #pragma mark - Table view data source

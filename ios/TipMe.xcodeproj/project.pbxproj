@@ -29,8 +29,10 @@
 		2C6A607A15CD5125005CF2E7 /* WelcomeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607915CD5125005CF2E7 /* WelcomeViewController.mm */; };
 		2C6A607D15CD55FA005CF2E7 /* LoginViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A607C15CD55FA005CF2E7 /* LoginViewController.mm */; };
 		2C6A608015CD5E73005CF2E7 /* bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A607F15CD5E73005CF2E7 /* bitcoin.png */; };
-		2C6A608615CD6073005CF2E7 /* LannyApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A608515CD6073005CF2E7 /* LannyApp.png */; };
-		2C6A608815CD6089005CF2E7 /* LannyApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A608715CD6089005CF2E7 /* LannyApp@2x.png */; };
+		2CEF293115CD77F400C871EB /* LannyApp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF293015CD77F400C871EB /* LannyApp2.png */; };
+		2CEF293315CD780300C871EB /* LannyApp2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF293215CD780300C871EB /* LannyApp2@2x.png */; };
+		2CEF293715CD788100C871EB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF293615CD788100C871EB /* Default.png */; };
+		2CEF293915CD788F00C871EB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEF293815CD788F00C871EB /* Default@2x.png */; };
 		7A79799515CD6F83002BD414 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A79799415CD6F83002BD414 /* AppDelegate.mm */; };
 		7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F115CD4E8B00767751 /* OverlayView.m */; };
 		7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */; };
@@ -111,8 +113,10 @@
 		2C6A607B15CD55F9005CF2E7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2C6A607C15CD55FA005CF2E7 /* LoginViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LoginViewController.mm; sourceTree = "<group>"; };
 		2C6A607F15CD5E73005CF2E7 /* bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitcoin.png; sourceTree = "<group>"; };
-		2C6A608515CD6073005CF2E7 /* LannyApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LannyApp.png; path = ../LannyApp.png; sourceTree = "<group>"; };
-		2C6A608715CD6089005CF2E7 /* LannyApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LannyApp@2x.png"; path = "../LannyApp@2x.png"; sourceTree = "<group>"; };
+		2CEF293015CD77F400C871EB /* LannyApp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LannyApp2.png; sourceTree = "<group>"; };
+		2CEF293215CD780300C871EB /* LannyApp2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LannyApp2@2x.png"; sourceTree = "<group>"; };
+		2CEF293615CD788100C871EB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2CEF293815CD788F00C871EB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7A79799415CD6F83002BD414 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		7A7979A015CD6FE4002BD414 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		7AFE92F015CD4E8B00767751 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
@@ -168,6 +172,10 @@
 		2C195A0815CD338F00010377 = {
 			isa = PBXGroup;
 			children = (
+				2CEF293815CD788F00C871EB /* Default@2x.png */,
+				2CEF293615CD788100C871EB /* Default.png */,
+				2CEF293215CD780300C871EB /* LannyApp2@2x.png */,
+				2CEF293015CD77F400C871EB /* LannyApp2.png */,
 				7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */,
 				2C195A1F15CD338F00010377 /* TipMe */,
 				2C195A3B15CD338F00010377 /* TipMeTests */,
@@ -288,8 +296,6 @@
 		2C6A607E15CD5E6C005CF2E7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2C6A608715CD6089005CF2E7 /* LannyApp@2x.png */,
-				2C6A608515CD6073005CF2E7 /* LannyApp.png */,
 				2C6A607F15CD5E73005CF2E7 /* bitcoin.png */,
 			);
 			name = Images;
@@ -401,8 +407,10 @@
 			files = (
 				2C195A2415CD338F00010377 /* InfoPlist.strings in Resources */,
 				2C6A608015CD5E73005CF2E7 /* bitcoin.png in Resources */,
-				2C6A608615CD6073005CF2E7 /* LannyApp.png in Resources */,
-				2C6A608815CD6089005CF2E7 /* LannyApp@2x.png in Resources */,
+				2CEF293115CD77F400C871EB /* LannyApp2.png in Resources */,
+				2CEF293315CD780300C871EB /* LannyApp2@2x.png in Resources */,
+				2CEF293715CD788100C871EB /* Default.png in Resources */,
+				2CEF293915CD788F00C871EB /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
