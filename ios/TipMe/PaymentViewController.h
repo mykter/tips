@@ -14,8 +14,6 @@
 @interface PaymentViewController : UITableViewControllerWithLoadingViewController<PaymentModelDelegate, AuthorizationViewControllerDelegate>
 
 @property (strong, nonatomic) PaymentModel *model;
-@property (strong, nonatomic) UITextField *waiterIdField;
-@property (strong, nonatomic) UITextField *customerIdField;
 @property (strong, nonatomic) UITextField *amountField;
 
 @end

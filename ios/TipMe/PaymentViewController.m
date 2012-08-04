@@ -10,8 +10,6 @@
 
 @implementation PaymentViewController
 
-@synthesize waiterIdField;
-@synthesize customerIdField;
 @synthesize amountField;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,14 +30,6 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Send a Payment";
-    
-    self.waiterIdField = [[UITextField alloc] initWithFrame:CGRectMake(130, 10, 170, 40)];
-    self.waiterIdField.keyboardType = UIKeyboardTypeNumberPad;
-    self.waiterIdField.placeholder = @"The waiter's id";
-    
-    self.customerIdField = [[UITextField alloc] initWithFrame:CGRectMake(130, 10, 170, 40)];
-    self.customerIdField.keyboardType = UIKeyboardTypeNumberPad;
-    self.customerIdField.placeholder = @"Your id";
     
     self.amountField = [[UITextField alloc] initWithFrame:CGRectMake(130, 10, 170, 40)];
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
@@ -66,7 +56,7 @@
     //{
     [self showLoading:@"Authorizing..."];
     [self.navigationItem.rightBarButtonItem setEnabled:NO];
-    [self.model sendPayment:self.waiterIdField.text customerId:self.customerIdField.text amount:self.amountField.text];
+    [self.model sendPayment:@"1" customerId:@"2" amount:self.amountField.text];
     //}
 }
 
@@ -116,8 +106,6 @@
 
 - (void)paymentComplete
 {
-    self.customerIdField.text = @"";
-    self.waiterIdField.text = @"";
     self.amountField.text = @"";
     [self.model paymentAuthorized];
 }
@@ -136,7 +124,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"Enter payment details";
+    return @"Enter the tip amount";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -148,7 +136,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -162,21 +150,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    switch(indexPath.row)
-    {
-        case 0:
-            cell.textLabel.text = @"Waiter Id";
-            [cell.contentView addSubview:self.waiterIdField];
-            break;
-        case 1:
-            cell.textLabel.text = @"Customer Id";
-            [cell.contentView addSubview:self.customerIdField];
-            break;
-        case 2:
-            cell.textLabel.text = @"Amount";
-            [cell.contentView addSubview:self.amountField];
-            break;
-    }
+    cell.textLabel.text = @"Amount";
+    [cell.contentView addSubview:self.amountField];
     
     return cell;
 }
