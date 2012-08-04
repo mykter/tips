@@ -69,7 +69,7 @@
 - (BOOL)fixedFocus;
 - (void)setTorch:(BOOL)status;
 - (BOOL)torchIsOn;
-
+-(void) stopCapture;
 @end
 
 @protocol ZXingDelegate

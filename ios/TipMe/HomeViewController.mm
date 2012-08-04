@@ -54,6 +54,8 @@
 {
     UIViewController *controller = [[UIViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
+
+    [self launchQRScanner];
 }
 
 #pragma mark - Table view data source
@@ -157,7 +159,17 @@
     //This is displayed over the camera image, and is useful for flashing an indicator etc.
     OverlayView *ov = controller.overlayView;
     
+    [controller stopCapture];
+    [self dismissModalViewControllerAnimated:NO];
     
 }
+
+- (void)zxingControllerDidCancel:(ZXingWidgetController*)controller
+{
+    
+    [self dismissModalViewControllerAnimated:NO];
+}
+
+
 
 @end
