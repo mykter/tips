@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ZXingWidgetController.h"
 #import "QRCodeReader.h"
+#import "PaymentViewController.h"
 
-@interface HomeViewController : UITableViewController <ZXingDelegate>
+@interface HomeViewController : UIViewController <ZXingDelegate>
 
 @property (strong, nonatomic) UIButton *payButton;
-
+@property (nonatomic) BOOL successfullyCaptured;
+@property (nonatomic) BOOL firstLaunch;
+@property (nonatomic) NSString *capturedWaiterId;
 @property (nonatomic, retain) ZXingWidgetController *widController;
 @property (nonatomic, retain) QRCodeReader* qrcodeReader;
 

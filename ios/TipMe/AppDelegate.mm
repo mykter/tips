@@ -21,7 +21,8 @@
     //PaymentViewController *paymentViewCon = [[PaymentViewController alloc] initWithStyle:UITableViewStyleGrouped];
     //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:paymentViewCon];
     
-    HomeViewController *homeController = [[HomeViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    HomeViewController *homeController = [[HomeViewController alloc] init];
+    //self.window.rootViewController = homeController;
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:homeController];
     
     self.window.backgroundColor = [UIColor whiteColor];

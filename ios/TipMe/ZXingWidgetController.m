@@ -423,8 +423,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     [d decodeImage:scrn cropRect:cropRect];
     
     //This seems to be the line of code that causes it to stop!
-    //decoding = [d decodeImage:scrn cropRect:cropRect] == YES ? NO : YES;
-    
+    decoding = [d decodeImage:scrn cropRect:cropRect] == YES ? NO : YES;
 
 } 
 #endif

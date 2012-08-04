@@ -16,6 +16,9 @@
 			<array>
 				<string>LannyApp.png</string>
 				<string>LannyApp@2x.png</string>
+				<string>LannyApp2.png</string>
+				<string>LannyApp2@2x.png</string>
+				<string>Default@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

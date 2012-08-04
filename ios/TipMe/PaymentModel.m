@@ -22,7 +22,7 @@
     NSString *urlString = [NSString stringWithFormat:@"http://%@/pay/%@/%@/%@",
                            SERVER,
                            customerId,
-                           @"2c45d4d6-7427-45ca-88ed-3d7f275646b6",
+                           waiterId,
                            amount];
     
     NSLog(@"Sending the request to %@", urlString);
@@ -36,6 +36,9 @@
     [NSURLConnection sendAsynchronousRequest:requestObj queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
      {
          NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *)response;
+         
+        NSString *someString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+         NSLog(@"Body of response: %@", someString);
          
          if(error)
          {

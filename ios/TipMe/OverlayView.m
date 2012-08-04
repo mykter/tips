@@ -154,7 +154,7 @@ static const CGFloat kPadding = 10;
   
     if (displayedMessage == nil) 
     {
-        self.displayedMessage = @"Place a barcode inside the viewfinder rectangle to scan it.";
+        self.displayedMessage = @"Scan your waiters' Lany ID to continue...";
     }
 	
     CGContextRef c = UIGraphicsGetCurrentContext();

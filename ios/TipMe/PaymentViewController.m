@@ -11,6 +11,7 @@
 @implementation PaymentViewController
 
 @synthesize amountField;
+@synthesize waiterId;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,7 +36,9 @@
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
     self.amountField.placeholder = @"The amount to tip";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(sendPayment)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tip" style:UIBarButtonItemStyleDone target:self action:@selector(sendPayment)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelPayment)];
+
 }
 
 - (void)viewDidUnload
@@ -45,6 +48,12 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.amountField becomeFirstResponder];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -52,12 +61,22 @@
 
 - (void)sendPayment
 {
-    //if([self.model validate:self.waiterIdField.text customerId:self.customerIdField.text amount:self.amountField.text])
-    //{
+    if([self.amountField.text length] == 0)
+    {
+        return;
+    }
+    
     [self showLoading:@"Authorizing..."];
     [self.navigationItem.rightBarButtonItem setEnabled:NO];
-    [self.model sendPayment:@"1" customerId:@"2" amount:self.amountField.text];
-    //}
+    self.model.delegate = self;
+    [self.model sendPayment:self.waiterId customerId:@"2" amount:self.amountField.text];
+}
+
+- (void)cancelPayment
+{
+    self.model.delegate = nil;
+    [self hideLoading];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - PaymentModelDelegate
@@ -79,6 +98,8 @@
 - (void)sendPaymentComplete
 {
     [self dismissModalViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Payment Sent"
                                                     message:@"Your tip has been sent and will be received in a few days."
                                                    delegate:self
@@ -154,58 +175,6 @@
     [cell.contentView addSubview:self.amountField];
     
     return cell;
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 @end
