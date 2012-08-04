@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) PaymentModel *model;
 @property (strong, nonatomic) UITextField *amountField;
+@property (strong, nonatomic) NSString *waiterId;
 
 @end

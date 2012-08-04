@@ -11,6 +11,7 @@
 @implementation PaymentViewController
 
 @synthesize amountField;
+@synthesize waiterId;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,7 +36,9 @@
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
     self.amountField.placeholder = @"The amount to tip";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(sendPayment)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tip" style:UIBarButtonItemStyleDone target:self action:@selector(sendPayment)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelPayment)];
+
 }
 
 - (void)viewDidUnload
@@ -45,6 +48,12 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.amountField becomeFirstResponder];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -52,12 +61,17 @@
 
 - (void)sendPayment
 {
-    //if([self.model validate:self.waiterIdField.text customerId:self.customerIdField.text amount:self.amountField.text])
-    //{
     [self showLoading:@"Authorizing..."];
     [self.navigationItem.rightBarButtonItem setEnabled:NO];
-    [self.model sendPayment:@"1" customerId:@"2" amount:self.amountField.text];
-    //}
+    self.model.delegate = self;
+    [self.model sendPayment:self.waiterId customerId:@"2" amount:self.amountField.text];
+}
+
+- (void)cancelPayment
+{
+    self.model.delegate = nil;
+    [self hideLoading];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - PaymentModelDelegate

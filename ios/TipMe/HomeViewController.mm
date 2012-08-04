@@ -16,6 +16,8 @@
 @synthesize qrcodeReader;
 @synthesize widController;
 @synthesize successfullyCaptured;
+@synthesize firstLaunch;
+@synthesize capturedWaiterId;
 
 - (void)viewDidLoad
 {
@@ -23,8 +25,13 @@
     
     self.navigationItem.title = @"Welcome";
     
+    self.firstLaunch = YES;
+    
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
-    [self.view addSubview:imageView];    
+    imageView.frame.origin = CGPointMake(0,-50);
+    [self.view addSubview:imageView];
+        
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Scan" style:UIBarButtonItemStyleDone target:self action:@selector(launchQRScanner)];
 }
 
 - (void)viewDidUnload
@@ -38,12 +45,18 @@
     
     if(self.successfullyCaptured)
     {
-        PaymentViewController *payCon = [[PaymentViewController alloc] init];
+        PaymentViewController *payCon = [[PaymentViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        payCon.waiterId = self.capturedWaiterId;
         [self.navigationController pushViewController:payCon animated:YES];
+        self.successfullyCaptured = NO;
     }
     else
     {
-        [self launchQRScanner];
+        if(self.firstLaunch)
+        {
+            [self launchQRScanner];
+            self.firstLaunch = NO;
+        }
     }
     
 }
@@ -79,6 +92,7 @@
     NSLog(@"Scanned data: %@",result);
     
     self.successfullyCaptured = YES;
+    self.capturedWaiterId = result;
     
     //This is displayed over the camera image, and is useful for flashing an indicator etc.
     OverlayView *ov = controller.overlayView;
