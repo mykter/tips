@@ -17,10 +17,9 @@ db = pm_connection.lannyapp
 
 def reset_db():
 	luigi  = {
-		'_id': '2c45d4d6-7427-45ca-88ed-3d7f275646b6',
 		'name': "Luigi",
 		'access_token': 'E22AW3Y80PZA7274S69Z501PHST5ANVY1WG8NAA13DY30APVGF7JZPVKY8E8RGA7',
-		'merchant_id': '052B43WCFC'}
+		'_id': '052B43WCFC'}
 	pm_connection.drop_database('lannyapp')
 	users = db.users
 	users.insert(luigi)
@@ -35,7 +34,7 @@ def get_user(id):
 
 def get_client(id):
 	recipient = get_user(id)
-	return gocardless.Client(app_id=app_id, app_secret=app_secret, merchant_id=recipient['merchant_id'], access_token=recipient['access_token'])
+	return gocardless.Client(app_id=app_id, app_secret=app_secret, merchant_id=recipient['_id'], access_token=recipient['access_token'])
 
 def payment_url(request):
 	try:
