@@ -31,8 +31,8 @@
     
     self.payButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.payButton addTarget:self action:@selector(takePayment) forControlEvents:UIControlEventTouchUpInside];
-    [self.payButton setImage:[UIImage imageNamed:@"bitcoin"] forState:UIControlEventAllEvents];
-    self.payButton.frame = CGRectMake(0,0,130,130);
+    [self.payButton setImage:[UIImage imageNamed:@"bitcoin"] forState:UIControlStateNormal];
+    self.payButton.frame = CGRectMake(35,40,250,250);
     [self.view addSubview:payButton];
 }
 
