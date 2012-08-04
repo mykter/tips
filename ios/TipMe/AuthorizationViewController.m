@@ -36,13 +36,14 @@
     self.webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 480)];
     self.webView.delegate = self;
     self.webView.backgroundColor = [UIColor purpleColor];
+    self.webView.scalesPageToFit = YES;
     [self.view addSubview:self.webView];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-//    self.webView = nil;
+    self.webView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
