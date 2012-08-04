@@ -25,6 +25,7 @@
 		2C195A5215CD368900010377 /* PaymentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A5115CD368900010377 /* PaymentModel.m */; };
 		2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */; };
 		2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */; };
+		2C195AAC15CD477E00010377 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AAB15CD477E00010377 /* SignInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,9 @@
 		2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerWithLoadingViewController.m; sourceTree = "<group>"; };
 		2C195AA715CD3AAD00010377 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
 		2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
+		2C195AAA15CD477E00010377 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		2C195AAB15CD477E00010377 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		2C195AAD15CD489F00010377 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,12 +130,13 @@
 		2C195A1F15CD338F00010377 /* TipMe */ = {
 			isa = PBXGroup;
 			children = (
-				2C195A5315CD374500010377 /* Models */,
-				2C195A4C15CD339400010377 /* ViewControllers */,
 				2C195A2815CD338F00010377 /* AppDelegate.h */,
 				2C195A2915CD338F00010377 /* AppDelegate.m */,
-				2C195A2B15CD338F00010377 /* TipMe.xcdatamodeld */,
+				2C195AAD15CD489F00010377 /* Common.h */,
+				2C195A5315CD374500010377 /* Models */,
 				2C195A2015CD338F00010377 /* Supporting Files */,
+				2C195A2B15CD338F00010377 /* TipMe.xcdatamodeld */,
+				2C195A4C15CD339400010377 /* ViewControllers */,
 			);
 			path = TipMe;
 			sourceTree = "<group>";
@@ -169,12 +174,14 @@
 		2C195A4C15CD339400010377 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C195A4D15CD33AF00010377 /* PaymentViewController.h */,
-				2C195A4E15CD33AF00010377 /* PaymentViewController.m */,
-				2C195AA415CD38E600010377 /* UITableViewControllerWithLoadingViewController.h */,
-				2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */,
 				2C195AA715CD3AAD00010377 /* AuthorizationViewController.h */,
 				2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */,
+				2C195A4D15CD33AF00010377 /* PaymentViewController.h */,
+				2C195A4E15CD33AF00010377 /* PaymentViewController.m */,
+				2C195AAA15CD477E00010377 /* SignInViewController.h */,
+				2C195AAB15CD477E00010377 /* SignInViewController.m */,
+				2C195AA415CD38E600010377 /* UITableViewControllerWithLoadingViewController.h */,
+				2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 				2C195A5215CD368900010377 /* PaymentModel.m in Sources */,
 				2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */,
 				2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */,
+				2C195AAC15CD477E00010377 /* SignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

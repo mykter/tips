@@ -10,11 +10,13 @@
 
 @protocol AuthorizationViewControllerDelegate <NSObject>
 
+- (void)paymentComplete;
+- (void)paymentCancelled;
 - (void)cancel;
 
 @end
 
-@interface AuthorizationViewController : UIViewController
+@interface AuthorizationViewController : UIViewController<UIWebViewDelegate>
 
 @property (strong, nonatomic) id<AuthorizationViewControllerDelegate> delegate;
 @property (strong, nonatomic) UIWebView *webView;

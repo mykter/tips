@@ -19,17 +19,73 @@
 
 - (void)sendPayment:(NSString *)waiterId customerId:(NSString *)customerId amount:(NSString *)amount
 {
-    [self.delegate sendPaymentOpenLink:@"http://www.gocardless.com"];
+    NSString *urlString = [NSString stringWithFormat:@"http://%@/~tomasmcguinness/sendpayment.html?customerId=%@&waiterId=%@&amount=%@",
+                           SERVER,
+                           customerId,
+                           waiterId,
+                           amount];
+    
+    NSLog(@"Sending the request to %@", urlString);
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *requestObj = [NSMutableURLRequest requestWithURL:url];
+    [requestObj setValue:@"application/json" forHTTPHeaderField:@"accept"];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:requestObj queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *)response;
+         
+         if(error)
+         {
+             NSLog(@"Request failed: %@", [error localizedDescription]);
+             
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self.delegate sendPaymentFailed];
+             });
+         }
+         else
+         {
+             if(httpResp.statusCode == 200)
+             {
+                 NSDictionary *results = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+                 
+                 if(error != nil)
+                 {
+                     NSLog(@"Eror parsing login response: %@", [error localizedDescription]);
+                     
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [self.delegate sendPaymentFailed];
+                     });
+                     
+                     return;
+                 }
+                 
+                 NSString *paymentUrl = [results valueForKey:@"paymentUrl"];
+                 
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [self.delegate sendPaymentOpenLink:paymentUrl];
+                 });
+             }
+             else
+             {
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [self.delegate sendPaymentFailed];
+                 });
+             }
+         }
+     }];
 }
 
 - (void)paymentAuthorized
 {
-    
+    [self.delegate sendPaymentComplete];
 }
 
 - (void)paymentCancelled
 {
-    
+    [self.delegate sendPaymentFailed];
 }
 
 @end

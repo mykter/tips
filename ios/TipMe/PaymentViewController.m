@@ -78,14 +78,54 @@
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
     
     AuthorizationViewController *authorizeView = [[AuthorizationViewController alloc] init];
-    [authorizeView openUrl:paymentUrl];
     authorizeView.delegate = self;
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:authorizeView];
     [self presentModalViewController:navController animated:YES];
+    
+    [authorizeView openUrl:paymentUrl];
+}
+
+- (void)sendPaymentComplete
+{
+    [self dismissModalViewControllerAnimated:YES];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Payment Sent"
+                                                    message:@"Your tip has been sent and will be received in a few days."
+                                                   delegate:self
+                                          cancelButtonTitle:@"Dismiss"
+                                          otherButtonTitles: nil];
+    [alert show];
+}
+
+- (void)sendPaymentFailed
+{
+    [self hideLoading];
+    [self.navigationItem.rightBarButtonItem setEnabled:YES];
+    
+    [self dismissModalViewControllerAnimated:YES];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to Send Payment"
+                                                    message:@"A horrible error has occured and we have to stop."
+                                                   delegate:self
+                                          cancelButtonTitle:@"Dismiss"
+                                          otherButtonTitles: nil];
+    [alert show];
 }
 
 #pragma mark - AuthorizationViewController delegate
+
+- (void)paymentComplete
+{
+    self.customerIdField.text = @"";
+    self.waiterIdField.text = @"";
+    self.amountField.text = @"";
+    [self.model paymentAuthorized];
+}
+
+- (void)paymentCancelled
+{
+    [self.model paymentCancelled];
+}
 
 - (void)cancel
 {

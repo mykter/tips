@@ -33,14 +33,16 @@
     
     self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
 	
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    self.webView = [[UIWebView alloc] initWithFrame: CGRectMake(0, 0, 320, 480)];
+    self.webView.delegate = self;
+    self.webView.backgroundColor = [UIColor purpleColor];
     [self.view addSubview:self.webView];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.webView = nil;
+//    self.webView = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -58,6 +60,28 @@
 - (void)cancel
 {
     [self.delegate cancel];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+     NSLog(@"Finished Load");
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webViewB
+{
+    // Intercept the callback from the payment and redirect if necessary.
+    //
+    NSLog(@"Loading: %@", webViewB.request.URL.absoluteString);
+    
+    if(webViewB.request.URL.absoluteString == @"http://www.bing.com")
+    {
+        [self.delegate paymentComplete];
+    }
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Failed to load page: %@", [error localizedDescription]);
 }
 
 @end
