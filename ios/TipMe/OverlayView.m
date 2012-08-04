@@ -37,22 +37,7 @@ static const CGFloat kPadding = 10;
 
 #pragma Flahes
 
-- (void) flashLookingForUser
-{
-    NSLog(@"flashLookingForUser called...");
-    additionLabel = @"Looking up...";
-    
-    if (showAdditionalFlash) showAdditionalFlash = NO;
-    showLookingFlash = YES;
-    
-    [cancelButton setTitle:@"Done" forState:UIControlStateNormal];
-    
-    useRed = NO;
-    
-    [self performSelector:@selector(startUsingRed) 
-               withObject:self 
-               afterDelay:0.3];
-}
+
 
 
 - (void) startUsingRed
@@ -60,16 +45,6 @@ static const CGFloat kPadding = 10;
     useRed = YES;
 }
 
-- (void) flashGroupAddition: (NSString *) name isNew: (BOOL) newPerson
-{
-    NSLog(@"flashGroupAddition called...");
-    additionLabel = [NSString stringWithFormat: @"Adding %@", name];
-    
-    if (showLookingFlash) showLookingFlash = NO;
-    showAdditionalFlash = YES;
-
-    [cancelButton setTitle:@"Done" forState:UIControlStateNormal];
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id) initWithFrame:(CGRect)theFrame cancelEnabled:(BOOL)isCancelEnabled oneDMode:(BOOL)isOneDModeEnabled {

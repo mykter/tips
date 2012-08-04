@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "ZXingWidgetController.h"
+#import "QRCodeReader.h"
 
 @implementation HomeViewController
 
@@ -127,5 +129,31 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+#pragma mark - QR Code 
+
+-(void) launchQRCodeReader
+{
+//    //Launch the QR Scanner...
+//    widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
+//    qrcodeReader = [[QRCodeReader alloc] init];
+//    
+//    NSSet *readers = [[NSSet alloc ] initWithObjects:qrcodeReader,nil];
+//    widController.readers = readers;
+//    [self presentViewController:widController animated:NO completion: nil];
+//    NSLog(@"Launching QR Code Reader.");
+
+}
+
+//- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result
+//{
+//    NSLog(@"Scanned data: %@",result);
+//    
+//    if (self.isViewLoaded)
+//    {
+//        [resultsView setText:resultsToDisplay];
+//        [resultsView setNeedsDisplay];
+//    }
+//}
+
 
 @end
