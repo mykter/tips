@@ -25,3 +25,10 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#ZXing Library
+zxing-2.0
+
+#Apple Fails...
+.DS_Store
+

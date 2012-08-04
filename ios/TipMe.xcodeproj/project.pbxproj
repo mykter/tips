@@ -25,6 +25,17 @@
 		2C195A5215CD368900010377 /* PaymentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195A5115CD368900010377 /* PaymentModel.m */; };
 		2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */; };
 		2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */; };
+		7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F115CD4E8B00767751 /* OverlayView.m */; };
+		7AFE92F715CD4E8B00767751 /* QRScannerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F315CD4E8B00767751 /* QRScannerController.mm */; };
+		7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */; };
+		7AFE935C15CD55FA00767751 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935B15CD55FA00767751 /* AVFoundation.framework */; };
+		7AFE935E15CD560000767751 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935D15CD560000767751 /* AudioToolbox.framework */; };
+		7AFE936015CD560900767751 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE935F15CD560900767751 /* CoreVideo.framework */; };
+		7AFE936215CD565B00767751 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936115CD565B00767751 /* CoreMedia.framework */; };
+		7AFE936415CD566900767751 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936315CD566900767751 /* libiconv.dylib */; };
+		7AFE936615CD567700767751 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936515CD567700767751 /* AddressBook.framework */; };
+		7AFE936815CD567D00767751 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE936715CD567D00767751 /* AddressBookUI.framework */; };
+		7AFE93C115CD5DE900767751 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFE93BC15CD5DB200767751 /* libZXingWidget.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2C195A1215CD338F00010377;
 			remoteInfo = TipMe;
+		};
+		7AFE93BB15CD5DB200767751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		7AFE93BD15CD5DB200767751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
+		7AFE93BF15CD5DE400767751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ZXingWidget;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -64,6 +96,20 @@
 		2C195AA515CD38E600010377 /* UITableViewControllerWithLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewControllerWithLoadingViewController.m; sourceTree = "<group>"; };
 		2C195AA715CD3AAD00010377 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizationViewController.h; sourceTree = "<group>"; };
 		2C195AA815CD3AAD00010377 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizationViewController.m; sourceTree = "<group>"; };
+		7AFE92F015CD4E8B00767751 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		7AFE92F115CD4E8B00767751 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		7AFE92F215CD4E8B00767751 /* QRScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScannerController.h; sourceTree = "<group>"; };
+		7AFE92F315CD4E8B00767751 /* QRScannerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QRScannerController.mm; sourceTree = "<group>"; };
+		7AFE92F415CD4E8B00767751 /* ZXingWidgetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWidgetController.h; sourceTree = "<group>"; };
+		7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWidgetController.m; sourceTree = "<group>"; };
+		7AFE935B15CD55FA00767751 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7AFE935D15CD560000767751 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7AFE935F15CD560900767751 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		7AFE936115CD565B00767751 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7AFE936315CD566900767751 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		7AFE936515CD567700767751 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7AFE936715CD567D00767751 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "../zxing-2.0/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +117,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AFE93C115CD5DE900767751 /* libZXingWidget.a in Frameworks */,
+				7AFE936815CD567D00767751 /* AddressBookUI.framework in Frameworks */,
+				7AFE936615CD567700767751 /* AddressBook.framework in Frameworks */,
+				7AFE936415CD566900767751 /* libiconv.dylib in Frameworks */,
+				7AFE936215CD565B00767751 /* CoreMedia.framework in Frameworks */,
+				7AFE936015CD560900767751 /* CoreVideo.framework in Frameworks */,
+				7AFE935E15CD560000767751 /* AudioToolbox.framework in Frameworks */,
+				7AFE935C15CD55FA00767751 /* AVFoundation.framework in Frameworks */,
 				2C195A1815CD338F00010377 /* UIKit.framework in Frameworks */,
 				2C195A1A15CD338F00010377 /* Foundation.framework in Frameworks */,
 				2C195A1C15CD338F00010377 /* CoreGraphics.framework in Frameworks */,
@@ -95,6 +149,7 @@
 		2C195A0815CD338F00010377 = {
 			isa = PBXGroup;
 			children = (
+				7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */,
 				2C195A1F15CD338F00010377 /* TipMe */,
 				2C195A3B15CD338F00010377 /* TipMeTests */,
 				2C195A1615CD338F00010377 /* Frameworks */,
@@ -114,6 +169,13 @@
 		2C195A1615CD338F00010377 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AFE936715CD567D00767751 /* AddressBookUI.framework */,
+				7AFE936515CD567700767751 /* AddressBook.framework */,
+				7AFE936315CD566900767751 /* libiconv.dylib */,
+				7AFE936115CD565B00767751 /* CoreMedia.framework */,
+				7AFE935F15CD560900767751 /* CoreVideo.framework */,
+				7AFE935D15CD560000767751 /* AudioToolbox.framework */,
+				7AFE935B15CD55FA00767751 /* AVFoundation.framework */,
 				2C195A1715CD338F00010377 /* UIKit.framework */,
 				2C195A1915CD338F00010377 /* Foundation.framework */,
 				2C195A1B15CD338F00010377 /* CoreGraphics.framework */,
@@ -169,6 +231,12 @@
 		2C195A4C15CD339400010377 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7AFE92F015CD4E8B00767751 /* OverlayView.h */,
+				7AFE92F115CD4E8B00767751 /* OverlayView.m */,
+				7AFE92F215CD4E8B00767751 /* QRScannerController.h */,
+				7AFE92F315CD4E8B00767751 /* QRScannerController.mm */,
+				7AFE92F415CD4E8B00767751 /* ZXingWidgetController.h */,
+				7AFE92F515CD4E8B00767751 /* ZXingWidgetController.m */,
 				2C195A4D15CD33AF00010377 /* PaymentViewController.h */,
 				2C195A4E15CD33AF00010377 /* PaymentViewController.m */,
 				2C195AA415CD38E600010377 /* UITableViewControllerWithLoadingViewController.h */,
@@ -188,6 +256,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		7AFE93B415CD5DB200767751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AFE93BC15CD5DB200767751 /* libZXingWidget.a */,
+				7AFE93BE15CD5DB200767751 /* ZXingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,6 +279,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7AFE93C015CD5DE400767751 /* PBXTargetDependency */,
 			);
 			name = TipMe;
 			productName = TipMe;
@@ -246,6 +324,12 @@
 			mainGroup = 2C195A0815CD338F00010377;
 			productRefGroup = 2C195A1415CD338F00010377 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7AFE93B415CD5DB200767751 /* Products */;
+					ProjectRef = 7AFE93B315CD5DB200767751 /* ZXingWidget.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2C195A1215CD338F00010377 /* TipMe */,
@@ -253,6 +337,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7AFE93BC15CD5DB200767751 /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = 7AFE93BB15CD5DB200767751 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7AFE93BE15CD5DB200767751 /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = 7AFE93BD15CD5DB200767751 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2C195A1115CD338F00010377 /* Resources */ = {
@@ -301,6 +402,9 @@
 				2C195A5215CD368900010377 /* PaymentModel.m in Sources */,
 				2C195AA615CD38E600010377 /* UITableViewControllerWithLoadingViewController.m in Sources */,
 				2C195AA915CD3AAD00010377 /* AuthorizationViewController.m in Sources */,
+				7AFE92F615CD4E8B00767751 /* OverlayView.m in Sources */,
+				7AFE92F715CD4E8B00767751 /* QRScannerController.mm in Sources */,
+				7AFE92F815CD4E8B00767751 /* ZXingWidgetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +423,11 @@
 			isa = PBXTargetDependency;
 			target = 2C195A1215CD338F00010377 /* TipMe */;
 			targetProxy = 2C195A3915CD338F00010377 /* PBXContainerItemProxy */;
+		};
+		7AFE93C015CD5DE400767751 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZXingWidget;
+			targetProxy = 7AFE93BF15CD5DE400767751 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +505,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TipMe/TipMe-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../zxing-2.0/iphone/ZXingWidget/Classes/**",
+					"../zxing-2.0/cpp/core/src",
+				);
 				INFOPLIST_FILE = "TipMe/TipMe-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -407,6 +520,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TipMe/TipMe-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"../zxing-2.0/iphone/ZXingWidget/Classes/**",
+					"../zxing-2.0/cpp/core/src",
+				);
 				INFOPLIST_FILE = "TipMe/TipMe-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -466,6 +583,7 @@
 				2C195A4815CD339000010377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C195A4915CD339000010377 /* Build configuration list for PBXNativeTarget "TipMeTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +592,7 @@
 				2C195A4B15CD339000010377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
