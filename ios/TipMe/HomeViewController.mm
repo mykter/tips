@@ -13,6 +13,8 @@
 @implementation HomeViewController
 
 @synthesize payButton;
+@synthesize qrcodeReader;
+@synthesize widController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -129,31 +131,33 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-#pragma mark - QR Code 
 
--(void) launchQRCodeReader
+#pragma ZXing Protocol
+-(void)launchQRScanner
 {
-//    //Launch the QR Scanner...
-//    widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
-//    qrcodeReader = [[QRCodeReader alloc] init];
-//    
-//    NSSet *readers = [[NSSet alloc ] initWithObjects:qrcodeReader,nil];
-//    widController.readers = readers;
-//    [self presentViewController:widController animated:NO completion: nil];
-//    NSLog(@"Launching QR Code Reader.");
-
+   
+    widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
+    qrcodeReader = [[QRCodeReader alloc] init];
+    
+    NSSet *readers = [[NSSet alloc ] initWithObjects:qrcodeReader,nil];
+    widController.readers = readers;
+    [self presentViewController:widController animated:NO completion: nil];
+    NSLog(@"[RKQRViewController] Scan button was pressed.");
 }
 
-//- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result
-//{
-//    NSLog(@"Scanned data: %@",result);
-//    
-//    if (self.isViewLoaded)
-//    {
-//        [resultsView setText:resultsToDisplay];
-//        [resultsView setNeedsDisplay];
-//    }
-//}
+- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result
+{
+    NSLog(@"Scanned data: %@",result);
+    
+    if (self.isViewLoaded)
+    {
 
+    }
+    
+    //This is displayed over the camera image, and is useful for flashing an indicator etc.
+    OverlayView *ov = controller.overlayView;
+    
+    
+}
 
 @end
